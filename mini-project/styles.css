@@ -1,0 +1,84 @@
+.users {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.users > * {
+  box-sizing: border-box;
+  width: 50%;
+  padding: 10px;
+  border: 1px solid black;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.posts {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.posts > * {
+  box-sizing: border-box;
+  width: 20%;
+  padding: 10px;
+  border: 1px solid black;
+  
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+button {
+  width: 90%;
+  margin-left: 5%;
+  box-sizing: border-box;
+}
+
+.comments {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.comments > * {
+  box-sizing: border-box;
+  width: 25%;
+  padding: 10px;
+  border: 1px solid black;
+  
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.hide {
+  display: none;
+}
+
+
+
+:root {
+  /* this has to be set to switch between light or dark */
+  color-scheme: light dark;
+
+  --light-bg: ghostwhite;
+  --light-color: darkslategray;
+
+  --dark-bg: darkslategray;
+  --dark-color: ghostwhite;
+}
+
+* {
+  background-color: light-dark(var(--light-bg), var(--dark-bg));
+  color: light-dark(var(--light-color), var(--dark-color));
+}
+
+.light {
+  /* forces light color-scheme */
+  color-scheme: light;
+}
+.dark {
+  /* forces dark color-scheme */
+  color-scheme: dark;
+}
